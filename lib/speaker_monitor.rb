@@ -3,5 +3,5 @@ class Team_member < ActiveRecord::Base
 end
 
 class Speaker < ActiveRecord::Base
-    belongs_to :team_member
+    belongs_to :teamMember
 end

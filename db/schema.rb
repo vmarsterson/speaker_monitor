@@ -15,16 +15,16 @@ ActiveRecord::Schema.define(version: 2019_09_04_132237) do
   create_table "speakers", force: :cascade do |t|
     t.string "name"
     t.string "company"
-    t.string "talk"
+    t.string "talk_type"
+    t.string "talk_title"
     t.string "bio"
     t.string "food"
     t.string "avatar"
-    t.integer "teamMember_id"
+    t.integer "team_member_id"
   end
 
-  create_table "teamMembers", force: :cascade do |t|
+  create_table "team_members", force: :cascade do |t|
     t.string "name"
-    t.string "title"
     t.string "avatar"
   end
 
