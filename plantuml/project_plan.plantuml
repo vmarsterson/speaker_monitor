@@ -1,0 +1,7 @@
+@startuml activity
+    Setup --> Database_setup : create speaker database
+    Database_setup --> Seed : insert seed data into databases
+    Seed --> Front_end_1 : design basic front end which displays: speaker image, speaker bio
+    Front_end_1 --> Link : link first page to second page
+    Link --> Front_end_2 : design second page to display
+@enduml

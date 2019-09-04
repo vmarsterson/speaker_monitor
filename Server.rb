@@ -1,12 +1,12 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra-websocket'
-require_relative './lib/task_tracker.rb'
+require_relative './lib/speaker_monitor.rb'
 
 class Server < Sinatra::Base
     # set :sockets, Array.new
 
         get "/" do
-            erb :index, locals: {speaker_monitor: Speaker_monitor.all}
+            erb :index
         end
 end
