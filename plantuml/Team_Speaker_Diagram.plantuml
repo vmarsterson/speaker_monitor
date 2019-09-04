@@ -1,0 +1,16 @@
+@startuml test
+left to right direction
+actor Seb_B
+actor Margaux_G
+actor Verity
+rectangle TechTalks {
+    Margaux_G -- (Alberto Domingo)
+    Margaux_G -- (Laurence Harribey)
+    Verity -- (Konstantinos Komaitis)
+    Verity -- (Andrea Beccalli)
+    Verity -- (Andrea Calderaro)
+    Verity -- (Florine Belle)
+    Verity -- (Meryem Marzouki)
+    Seb_B -- (Olivier Esper)
+}
+@enduml

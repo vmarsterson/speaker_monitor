@@ -1,0 +1,23 @@
+@startuml user_path
+    start   
+    repeat 
+    :enter landing page;
+    if (click on speaker image?) then (yes)
+        : show bio;
+       : click away from bio;
+    else (no)
+    if (click on 'more info'?) then (yes)
+        : redirect to new page;
+        end
+    else (no)
+    end
+@enduml
+
+@startuml
+repeat
+  :read data;
+  :generate diagrams;
+repeat while (more data?) is (yes)
+->no;
+stop
+@enduml
