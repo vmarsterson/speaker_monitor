@@ -1,0 +1,44 @@
+<div class="Add_speaker">
+<form method="POST" action="/add_speaker" class="add_speaker">
+<h3>Create New Task</h3>
+    <div class="speaker_form">
+        <p class="speaker_text"> Name:</p>
+            <input name="name" class="speaker_input" type="text" placeholder="Insert speaker name" required>
+                <br>
+        <p class="speaker_text"> Speaker title:</p>
+            <input name="company" class="speaker_input" type="text" placeholder="Insert speaker title and company" reequired>
+                <br>
+        <p class="speaker_text"> Talk title:</p>
+            <input name="talk_title" class="speaker_input" type="text" placehodler="Insert title of speaker's talk" required>
+        <p class="speaker_text"> Talk type:</p>
+            <select class="speaker_input" id="speaker" name="talk_type">
+                <option value="Key Note">Key Note Speech</option>
+                <option value="Panel Debate">Panel Debate</option>
+                <option value="Workshop">Workshop</option>
+            </select>
+                <br>
+        <p class="bio"> Speaker bio:</p>
+            <input name="bio" class="speaker_input" type="text" placeholder="Insert speaker bio" required>
+        <p class="food"> Food options: </p>
+        <section>
+            <label>Breakfast 12/09/19</label>
+            <input name="food1" type="checkbox" value="Breakfast 12/09/19"/>
+            <label>Lunch 12/09/19</label>
+            <input name="food2" type="checkbox" value="Lunch 12/09/19"/>
+            <label>Dinner 12/09/19</label>
+            <input name="food3" type="checkbox" value="Dinner 12/09/19"/>
+            <label>Breakfast 13/09/19</label>
+            <input name="food4" type="checkbox" value="Breakfast 13/09/19"/>
+            <label>Lunch 13/09/19</label>
+            <input name="food5" type="checkbox" value="Lunch 13/09/19"/>
+        </section>
+        <p class="speaker_text"> Speaker picture: </p>
+            <input name="avatar" type="text" class="speaker_input" placeholder="Insert path to photo"/>
+        <br>
+        <p class="speaker_text"> Responsible BIICS respresentative</p>
+            <input name="team_member" type="text" placeholder="Insert team member name" required>
+        
+            <button type="submit" class="button">Add New Speaker</button>
+    </div>
+</form>
+</div>

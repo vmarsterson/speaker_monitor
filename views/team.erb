@@ -1,0 +1,17 @@
+<div class="Team_Member">
+    <img src="<%=team_member.avatar%>" alt="<%team_member.name%>">
+    <p><%=team_member.name%></p>
+</div>
+
+<%team_member.speakers.each do |speaker|%>
+    <div class="Speaker">
+        <img src="<%=speaker.avatar%>" alt="<%=speaker.name%>">
+        <p><%=speaker.name%></p>
+        <p><%=speaker.company%></p>
+        <p><%=speaker.bio%></p>
+        <h1> Talk </>
+        <p><%=speaker.talk_title%></p>
+        <p><%=speaker.talk_type%></p>
+        <p><%=if (speaker.food) then speaker.food end%></p>
+    </div>
+<%end%>

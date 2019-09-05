@@ -1,4 +1,10 @@
 /* Mobile Speakers 300px */
+.techtalks {
+    margin: auto;
+    display: block;
+    height: 35vh;
+    padding-top: 10vh;
+}
 
 .grid {
     grid-template: repeat(23, 1fr)/ repeat(1, 1fr);
