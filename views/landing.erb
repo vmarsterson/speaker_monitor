@@ -1,20 +1,20 @@
+<div class="landing">
 <img src="/posterlogocolors.png" alt="TechTalks: The Politics of Cybersecurity" class="techtalks">
+    <div class="gridB">
+        <div class="button_container">
+            <a href='/add_speaker' class="redirect_button"><b>ADD SPEAKER</b></a>
+        </div>  
 
-<div class="button_container">
-    <a href='/add_speaker' class="redirect_button"><b>Add Speaker</b></a>
-</div>  
-
-<div class="button_container">
-    <a href='/display_speaker' class="redirect_button"><b>See all speakers</b></a>
-</div>     
-
-<div class="button_container">
-    <a href='/display_team' class="redirect_button"><b></b></a>
-</div>     
-
-<form method="GET" action="/team_display">
-    <div class="speaker_form">
-        <p> Enter a team member you would like to track</p>
-            <input name="name" class="team_member_input" type="text" placeholder="Insert team member name here">
+        <div class="button_container">
+            <a href='/display_speaker' class="redirect_button"><b>SEE ALL SPEAKERS</b></a>
+        </div> 
     </div>
-</form>
+
+        <form method="GET" action="/team_display">
+            <div class="speaker_navigate">
+                <p> Enter a team member you would like to track</p>
+                    <input name="name" class="team_member_input" type="text" placeholder="Insert team member name here">
+                    <button type="submit" class="button">Find</button>
+            </div>
+        </form>
+</div>

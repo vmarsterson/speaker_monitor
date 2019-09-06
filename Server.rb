@@ -10,7 +10,7 @@ class Server < Sinatra::Base
     end
 
     get '/add_speaker' do
-        erb :create
+        erb :create 
     end
 
     post '/add_speaker' do
@@ -20,8 +20,10 @@ class Server < Sinatra::Base
         bio = params["bio"]
         food = [params["food1"], params["food2"], params["food3"], params["food4"], params["food5"]].join(",")
         avatar = params["avatar"]
+        responsible = Team_member.find_by(name: params["team"])
+        that_members_id = responsible.id
         puts params.inspect
-        Speaker.create(name: name, company: company, talk_type: talk_type, bio: bio, food: food, avatar: avatar)
+        Speaker.create(name: name, company: company, talk_type: talk_type, bio: bio, food: food, avatar: avatar, team_member_id: that_members_id)
         id = Speaker.all.last.id
         redirect "/"
     end
@@ -32,7 +34,7 @@ class Server < Sinatra::Base
 
     get '/remove_speaker/:id' do 
         Speaker.delete(params[:id])
-        redirect "/"
+        redirect "/display_speaker"
     end
 
     get '/team_display' do

@@ -1,32 +1,31 @@
-<a name="Speakers"></a>
+<div class="index">
+    <header>
+        <h1> Our Speakers </h1>
+    </header>
 
-	<div class="turquoisegrad bluetext">
-		<h1> Speakers </h1>
-		<h2 class="dspeaker"> Meet the experts. </h2>
-	</div>
-
-<!-- Grid -->
-    <div class="grid"> 
-
+    <div class="grid">
     <%speakers.each do |speaker|%>
-<!-- Front of box !--> 
-        <div class="flip-box">
-            <div class="flip-box-inner">
-                <img src="<%=speaker.avatar%>" alt="<%=speaker.name%>">
-            </div>
-<!-- Back of box !--> 
-            <div class="flip-box-back">
-                <div class="turquoise-background">
-                    <h4>"<%=speaker.name%>"</h4>
-                    <h5>"<%=speaker.company%>"</h5>
-                </div>
-                    <p class="bluetext"><%=speaker.bio%></p>
-            </div>
-        </div>
-    </div>	
-    <div class="button_container">
-    <a href="/remove_speaker/:id" method="DELETE" class="button">Remove Speaker</a>
-</div>
-    <%end%>
+            <div class="flip-box">
+                <div class="flip-box-inner">
 
-   
+                    <div class="flip-box-front">
+                        <img class="speaker-image" src="<%=speaker.avatar%>" alt="<%=speaker.name%>">
+                    </div>
+
+                    <div class="flip-box-back">
+                        <div class="titles">
+                            <h2><%=speaker.name%></h2>
+                            <h3><%=speaker.company%></h2>
+                        </div>
+                        <p><%=speaker.bio%></p>
+                        <a class ="speaker" href="/remove_speaker/<%=speaker.id%>" method="GET" class="button">Remove Speaker</a>
+                    </div>    
+                </div>          
+            </div>
+            <%end%>
+        </div>
+</div>
+
+<a class="button" href="/">Home</a>
+<a class="button" href='/add_speaker'>Add Speaker</a>
+    

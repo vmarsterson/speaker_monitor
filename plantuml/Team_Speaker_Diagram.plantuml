@@ -13,4 +13,5 @@ rectangle TechTalks {
     Verity -- (Meryem Marzouki)
     Seb_B -- (Olivier Esper)
 }
+
 @enduml

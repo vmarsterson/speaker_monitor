@@ -1,17 +1,39 @@
-<div class="Team_Member">
-    <img src="<%=team_member.avatar%>" alt="<%team_member.name%>">
-    <p><%=team_member.name%></p>
+<div class="Team">
+    <header>
+        <h1>Team Allocations</h1>
+    </header>
+    
+    <div class="Team_Membe grid">
+        <img class="team_img" src="<%=team_member.avatar%>" alt="<%team_member.name%>">
+        <div class="team_text">
+            <p><b><%=team_member.name%></b></p>
+            <p> Bio to come! <br><br> For now, read a poem by William Blake: Tiger Tiger. burning bright,
+In the forests of the night;
+What immortal hand or eye.
+Could frame thy fearful symmetry?
+
+In what distant deeps or skies.
+Burnt the fire of thine eyes?
+On what wings dare he aspire?
+What the hand, dare seize the fire?</p>
+        </div>
+    </div>
+    
+    <%team_member.speakers.each do |speaker|%>
+        <div class="Speaker">
+            <img class="speaker_img" src="<%=speaker.avatar%>" alt="<%=speaker.name%>">
+            <p><b><%=speaker.name%></b></p>
+            <p><i><%=speaker.company%></i></p>
+            <p><%=speaker.bio%></p>
+            <p><b> Talk details</b></p>
+            <p><i><%=speaker.talk_type%></i></p>
+            <p><%=speaker.talk_title%></p>
+            <p><b> Food arangements</b></p>
+            <p><%=if (speaker.food) then speaker.food end%></p>
+            <br><br>
+        </div>
+    <%end%>
+
+    <a class="button" href="/">Home</a>
 </div>
 
-<%team_member.speakers.each do |speaker|%>
-    <div class="Speaker">
-        <img src="<%=speaker.avatar%>" alt="<%=speaker.name%>">
-        <p><%=speaker.name%></p>
-        <p><%=speaker.company%></p>
-        <p><%=speaker.bio%></p>
-        <h1> Talk </>
-        <p><%=speaker.talk_title%></p>
-        <p><%=speaker.talk_type%></p>
-        <p><%=if (speaker.food) then speaker.food end%></p>
-    </div>
-<%end%>
